@@ -1,0 +1,19 @@
+<p>see recipe-book</p>
+<div class="container">
+  <div class="column">
+    <div class="recipieList">
+      <app-recipe-list
+        (recipeWasSelected)="selectedRecipe = $event"
+      ></app-recipe-list>
+    </div>
+    <div class="recipieDetail">
+      <app-recipe-detail
+        *ngIf="selectedRecipe; else infoText"
+        [recipe]="selectedRecipe"
+      ></app-recipe-detail>
+      <ng-template #infoText>
+        <p>Select a Recipe, please</p>
+      </ng-template>
+    </div>
+  </div>
+</div>

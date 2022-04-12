@@ -1,0 +1,11 @@
+<div>
+  <button>New Recipe</button>
+</div>
+<hr />
+<div>
+  <app-recipe-item
+    *ngFor="let recipeFromList of recipes"
+    [recipe]="recipeFromList"
+    (selectedRecipe)="onRecipeSelected(recipeFromList)"
+  ></app-recipe-item>
+</div>

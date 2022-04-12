@@ -1,0 +1,31 @@
+<nav class="nav">
+  <div class="flex">
+    <div class="title">
+      <a class="font" href="#">Recipe Book</a>
+    </div>
+    <div class="panel">
+      <ul class="menu">
+        <li>
+          <a class="font" href="#" (click)="onClick('recipes')">Recipes</a>
+        </li>
+        <li>
+          <a class="font" href="#" (click)="onClick('shopping-list')"
+            >Shopping List</a
+          >
+        </li>
+      </ul>
+      <ul class="manage">
+        <li>
+          <a class="font" href="#" appDropdown
+            >Manage
+            <span><i class="fa fa-level-down" aria-hidden="true"></i></span>
+          </a>
+          <ul class="slideOut">
+            <li><a class="font" href="#">Save Data</a></li>
+            <li><a class="font" href="#">Fetch Data</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

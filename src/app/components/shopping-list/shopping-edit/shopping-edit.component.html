@@ -1,0 +1,23 @@
+<div>
+  <form>
+    <div>
+      <label for="name">Name</label>
+      <input #nameInput type="text" id="name" />
+    </div>
+    <div>
+      <label for="amount">Amount</label>
+      <input #amountInput type="number" id="amount" />
+    </div>
+    <div>
+      <button
+        type="submit"
+        (click)="onTakeData(nameInput, amountInput)"
+        (click)="$event.preventDefault()"
+      >
+        Add
+      </button>
+      <button type="button">Delete</button>
+      <button type="button">Clear</button>
+    </div>
+  </form>
+</div>

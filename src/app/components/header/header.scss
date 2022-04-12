@@ -1,0 +1,53 @@
+$base-color: #323c41;
+
+nav {
+  box-shadow: -1px 4px 10px $base-color;
+  margin-bottom: 20px;
+  padding: 20px;
+  height: 70px;
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    .title {
+      width: 20%;
+      min-width: 160px;
+    }
+    .panel {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+      .menu {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 20px 0 10px;
+        padding: 0 20px 0 10px;
+        list-style: none;
+        width: 60%;
+        li {
+          padding: 0 10px 0 10px;
+          &:hover {
+            border-bottom: 2px solid $base-color;
+          }
+        }
+      }
+    }
+    .manage {
+      padding: 0 10px 0 10px;
+      list-style: none;
+      position: relative;
+      width: 110px;
+      .slideOut {
+        visibility: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        list-style: none;
+        padding: 7px;
+        background-color: #fff;
+      }
+      .open {
+        visibility: visible;
+      }
+    }
+  }
+}
